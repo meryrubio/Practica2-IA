@@ -12,6 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0c4a91161369ba48b82e058df955c00, type: 3}
   m_Name: GuardState(s)
   m_EditorClassIdentifier: 
-  stateparameters: []
+  stateparameters:
+  - actionParameters:
+    - action: {fileID: 11400000, guid: a95fc2d7971592b4c9cc1557ab8a6506, type: 2}
+      actionValue: 1
+    - action: {fileID: 11400000, guid: a95fc2d7971592b4c9cc1557ab8a6506, type: 2}
+      actionValue: 1
+    nextState: {fileID: 11400000, guid: 3078d3dd09c41104bbc7c8efaa274c44, type: 2}
+    and: 1
+  - actionParameters:
+    - action: {fileID: 11400000, guid: a95fc2d7971592b4c9cc1557ab8a6506, type: 2}
+      actionValue: 1
+    nextState: {fileID: 11400000, guid: 3078d3dd09c41104bbc7c8efaa274c44, type: 2}
+    and: 1
   guardPoint: {x: 0, y: 0, z: 0}
   blendParameter: 

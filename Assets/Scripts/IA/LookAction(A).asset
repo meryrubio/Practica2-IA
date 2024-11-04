@@ -9,8 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50f3960994bbd884ba5a384f586c2e07, type: 3}
-  m_Name: HearAction(A)
+  m_Script: {fileID: 11500000, guid: a2ef416d09ec56941a05a18b64a1bbfb, type: 3}
+  m_Name: LookAction(A)
   m_EditorClassIdentifier: 
   valeu: 0
-  radius: 266.3
+  rotationSpeed: 5
+  visionAngle: 46.2
+  visionDistance: 184.4

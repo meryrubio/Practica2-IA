@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 759825784ff73c64cbac8e3fa0ffdf81, type: 3}
+  m_Name: ShoutState(s)
+  m_EditorClassIdentifier: 
+  stateparameters:
+  - actionParameters:
+    - action: {fileID: 11400000, guid: edfac26cdbe623f4ebaea0b176789741, type: 2}
+      actionValue: 1
+    nextState: {fileID: 11400000, guid: 3078d3dd09c41104bbc7c8efaa274c44, type: 2}
+    and: 0
+  blendParameter: 
+  shoutSound: {fileID: 8300000, guid: 2b8158ce2f57f134f9ec5326ca62369c, type: 3}
