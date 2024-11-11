@@ -40,7 +40,7 @@ public class PlayerMouvement_CC : MonoBehaviour
         Jump(jumpPressed);
 
         Movement(x, z, shiftPressed);
-
+        print(mouseX);
         RotatePlayer(mouseX);
     }
 
