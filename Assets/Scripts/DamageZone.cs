@@ -6,13 +6,14 @@ public class DamageZone : MonoBehaviour
 {
     public float damageAmount = 10f; // cantidad de daño
 
-    private void OnTriggerEnter(Collider other)
+    public void CreateZone()
     {
-        // verifica si el objeto que entro tiene el componente PlayerHealth
-        PlayerHealth playerHealth = other.GetComponent<PlayerHealth>();
-        if (playerHealth != null)
-        {
-            playerHealth.TakeDamage(damageAmount); // ataca
-        }
+        
+        //// verifica si el objeto que entro tiene el componente PlayerHealth
+        //PlayerHealth playerHealth = other.GetComponent<PlayerHealth>();
+        //if (playerHealth != null)
+        //{
+        //    playerHealth.TakeDamage(damageAmount); // ataca
+        //}
     }
 }

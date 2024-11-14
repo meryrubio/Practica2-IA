@@ -128496,7 +128496,7 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 1.3833333
-    functionName: 
+    functionName: CreateZone
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
