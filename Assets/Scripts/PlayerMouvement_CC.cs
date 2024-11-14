@@ -12,6 +12,7 @@ public class PlayerMouvement_CC : MonoBehaviour
     private CharacterController characterController;
 
     public float walkingSpeed, runningSpeed, acceleration, rotationSpeed, gravityScale, jumpForce;
+    public int coinsCollected = 0;
 
     private float yvelocity = 0, currentSpeed;
 

@@ -20,6 +20,7 @@ public class Coin : MonoBehaviour
     {
         if (other.gameObject.GetComponent<PlayerMouvement_CC>())
         {
+            other.gameObject.GetComponent<PlayerMouvement_CC>().coinsCollected++;
             Destroy(gameObject);
 
         }

@@ -15,8 +15,9 @@ public class ChaseState : State
         State nextState = CheckActions(owner);
 
         NavMeshAgent navMeshAgent = owner.GetComponent<NavMeshAgent>(); //owner tiene el componente de navmeshagent / nos podemos mover
-        GameObject target = owner.GetComponent<TargetReference>().target; // oye owner dame tu componente de targetreference / tenemos el objetivo por el que nos vamos a mover
+        GameObject target = owner.GetComponent<TargetReference>().targets[0]; // oye owner dame tu componente de targetreference / tenemos el objetivo por el que nos vamos a mover
         Animator animator = owner.GetComponent<Animator>();
+        
 
         
         animator.SetFloat(blendParameter, navMeshAgent.velocity.magnitude / navMeshAgent.speed); //la velocidad maxima a la que puede ir es speed, lo dividimos para que quede entre 0 a 1

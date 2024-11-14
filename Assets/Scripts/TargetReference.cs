@@ -6,5 +6,5 @@ public class TargetReference : MonoBehaviour
 {
    // SCRIPT PARA GUARDAR LAS REFERENCIAS DE TARGET
 
-    public GameObject target;
+    public GameObject[] targets;
 }

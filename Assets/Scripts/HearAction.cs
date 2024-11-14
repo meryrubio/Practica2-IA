@@ -10,7 +10,7 @@ public class HearAction : Action
     {
         RaycastHit[] hits = Physics.SphereCastAll(owner.transform.position, radius, Vector3.up); // creamos un array como esfera porque escuchamos en todas la direcciones, casteamos una esfera
 
-        GameObject target = owner.GetComponent<TargetReference>().target; //target, ubi del player
+        GameObject target = owner.GetComponent<TargetReference>().targets[0]; //target, ubi del player
 
         foreach(RaycastHit hit in hits) //recorremos todos los objetos que escuchamos dentro de la esfera
         {

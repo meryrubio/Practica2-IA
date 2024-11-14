@@ -13,10 +13,11 @@ public class ShoutState : State
     public override State Run(GameObject owner)
     {
         State nextState = CheckActions(owner);
-
         Animator animator = owner.GetComponent<Animator>();
+            animator.SetBool(blendParameter, true);
+
         currentTime += Time.deltaTime;
-        if ( currentTime >= maxTime)
+        if ( currentTime >= maxTime) //reproducir el sonido.
         {
             audioSource = AudioManager.instance.PlayAudio3D(shoutSound, "shoutSound", owner, 40, 60);
             maxTime = shoutSound.length;

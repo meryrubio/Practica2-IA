@@ -10,7 +10,7 @@ public class LookAction : Action
 
     public override bool Check(GameObject owner)
     {
-        GameObject target = owner.GetComponent<TargetReference>().target; //target, ubi del player
+        GameObject target = owner.GetComponent<TargetReference>().targets[0]; //target, ubi del player
 
         if (target != null) //verifica si el objetivo existe, Si no hay un objetivo, no se realiza ninguna acción.
         {
@@ -31,7 +31,7 @@ public class LookAction : Action
 
     public override void DrawGizmos(GameObject owner)
     {
-        GameObject target = owner.GetComponent<TargetReference>().target;
+        GameObject target = owner.GetComponent<TargetReference>().targets[0];
 
         // para dibujar el cono de visión
         Gizmos.color = Color.green;
@@ -58,7 +58,7 @@ public class LookAction : Action
 
     public void Execute(GameObject owner) //responsable de hacer que el personaje gire suavemente hacia un objetivo específico 
     {
-        GameObject target = owner.GetComponent<TargetReference>().target;
+        GameObject target = owner.GetComponent<TargetReference>().targets[0];
 
         if (target != null)
         {

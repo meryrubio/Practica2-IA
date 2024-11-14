@@ -12,5 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e05d4e544cdf8149a6f407031eb9780, type: 3}
   m_Name: ChaseState(s)
   m_EditorClassIdentifier: 
-  stateparameters: []
-  blendParameter: 
+  stateparameters:
+  - actionParameters:
+    - action: {fileID: 11400000, guid: 0532b4a26395f594d8fc29c56998242f, type: 2}
+      actionValue: 0
+    - action: {fileID: 11400000, guid: a95fc2d7971592b4c9cc1557ab8a6506, type: 2}
+      actionValue: 0
+    nextState: {fileID: 11400000, guid: 686dcb6c4205bb444aa4d684796514dd, type: 2}
+    and: 1
+  - actionParameters:
+    - action: {fileID: 11400000, guid: ce8b47b3b56e2574dbab035579810e73, type: 2}
+      actionValue: 1
+    nextState: {fileID: 11400000, guid: 4fb1df1c0fa845f4d8a43d9b9beee9aa, type: 2}
+    and: 0
+  blendParameter: Speed

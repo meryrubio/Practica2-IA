@@ -15,8 +15,12 @@ MonoBehaviour:
   stateparameters:
   - actionParameters:
     - action: {fileID: 11400000, guid: edfac26cdbe623f4ebaea0b176789741, type: 2}
+      actionValue: 0
+    - action: {fileID: 11400000, guid: 6a92a6f66d618dc4e9062c9466f239ae, type: 2}
+      actionValue: 0
+    - action: {fileID: 11400000, guid: 0532b4a26395f594d8fc29c56998242f, type: 2}
       actionValue: 1
-    nextState: {fileID: 11400000, guid: 3078d3dd09c41104bbc7c8efaa274c44, type: 2}
-    and: 0
-  blendParameter: 
+    nextState: {fileID: 11400000, guid: 77854cbc0c80c4e48a6e0b89c5777b41, type: 2}
+    and: 1
+  blendParameter: Yelling
   shoutSound: {fileID: 8300000, guid: 2b8158ce2f57f134f9ec5326ca62369c, type: 3}
