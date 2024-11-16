@@ -718,7 +718,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 600754320}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.19894554, y: -0.0000000084312175, z: 0.0000000017115663, w: 0.98001057}
+  m_LocalRotation: {x: 0.19894554, y: 0.0000000084312175, z: -0.0000000017115663, w: 0.98001057}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -755,10 +755,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0a7cf3cba1a7294eafc05876fee0012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hearts:
-  - {fileID: 80190016}
-  - {fileID: 336147733}
-  - {fileID: 1420184223}
 --- !u!4 &646131414
 Transform:
   m_ObjectHideFlags: 0
@@ -1323,7 +1319,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1070369721}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.23441307, y: -0.0000000045121173, z: 0.0000000010880147, w: 0.9721371}
+  m_LocalRotation: {x: 0.23441309, y: 0.000000010660312, z: -0.0000000025705393, w: 0.9721371}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1580,7 +1576,10 @@ MonoBehaviour:
   maxHearts: 3
   heartHealth: 33.33
   currentHearts: 0
-  heartUI: {fileID: 646131413}
+  hearts:
+  - {fileID: 80190016}
+  - {fileID: 336147733}
+  - {fileID: 1420184223}
 --- !u!1 &1272695280
 GameObject:
   m_ObjectHideFlags: 0
@@ -2662,8 +2661,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36fd21d3e84be7c4e85322925ac22d3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 10
-  damageInterval: 1
+  health: {fileID: 1130183859}
   radius: 5
 --- !u!1 &1529578781
 GameObject:

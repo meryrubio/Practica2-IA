@@ -5,10 +5,9 @@ using static UnityEngine.UI.GridLayoutGroup;
 
 public class DamageZone : MonoBehaviour
 {
-    public float damageAmount = 10f; // cantidad de daño
-    private float nextDamageTime = 0f; // Tiempo para el siguiente daño
-    public float damageInterval = 1f; // Intervalo de tiempo entre daños
-
+    public PlayerHealth health;
+    private bool canDamage = true;
+    private float CoolDown = 3f;
 
     public float radius = 8f;
 
@@ -25,12 +24,9 @@ public class DamageZone : MonoBehaviour
             if (playerHealth != null) //verifica  si se encontro un componente PlayerHealth
                                       //Si playerHealth no es null, significa que tiene un componente PlayerHealth
             {
-                // aplica daño si ha pasado el intervalo
-                if (Time.time >= nextDamageTime)
-                {
-                    playerHealth.TakeDamage(damageAmount);//restar la cantidad de daño de la salud del jugador
-                    nextDamageTime = Time.time + damageInterval; // actualiza el tiempo para el siguiente daño
-                }
+                health.TakeDamage(1);
+                canDamage = false;
+                StartCoroutine(CoolDownDamage());
             }
         }
 
@@ -42,6 +38,23 @@ public class DamageZone : MonoBehaviour
         //}
 
 
+    }
+
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    // Verifica si el objeto que entró en el trigger tiene el componente PlayerHealth
+    //    PlayerHealth playerHealth = other.GetComponent<PlayerHealth>();
+    //    if (playerHealth != null && canDamage) // Si se encontró PlayerHealth y puede dañar
+    //    {
+    //        playerHealth.TakeDamage(1); // Aplica daño
+    //        canDamage = false; // Desactiva la posibilidad de aplicar daño
+    //        StartCoroutine(CoolDownDamage()); // Inicia el cooldown
+    //    }
+    //}
+    IEnumerator CoolDownDamage()
+    {
+        yield return new WaitForSeconds(CoolDown);
+        canDamage = true;
     }
 
     private void OnDrawGizmos()
