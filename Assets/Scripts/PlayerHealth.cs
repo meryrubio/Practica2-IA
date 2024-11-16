@@ -1,28 +1,45 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public float maxHealth = 100f;//salud máxima del jugador
-    public float CurrentHealth { get; private set; } //solo puede ser modificada dentro de la clase PlayerHealth.
+    public int maxHearts = 3; // Número total de corazones
+    public float heartHealth = 33.33f; // Salud por corazón (100 / 3)
+    public int currentHearts; // Corazones restantes
+    public Image[] hearts; // Array para almacenar las imágenes de los corazones
+
 
     private void Start()
     {
-        CurrentHealth = maxHealth; // inicia la salud del jugador
+        currentHearts = maxHearts; // Inicia con el número máximo de corazones
+        UpdateHearts();
     }
 
-    public void TakeDamage(float amount)
-    {
-        CurrentHealth -= amount;//resta la cantidad de daño
-        if (CurrentHealth < 0) // verifica si la salud actual del jugador ha caído por debajo de cero.
-        {
-            CurrentHealth = 0;// la salud del jugador no se vuelva negativa y representa que el jugador está "muerto".
-            //  muerte del jugador
-            Debug.Log("El jugador ha muerto.");
-        }
 
-        //actualizar la barra de vida
-        Debug.Log("Salud actual: " + CurrentHealth);
+    public void UpdateHearts()
+    {
+        for (int i = 0; i < hearts.Length; i++)
+        {
+            if( currentHearts <= 0 )
+            {
+                GameManager.instance.PlayerDied();
+                ReStartScene();
+            }
+        }
+    }
+
+    public void ReStartScene()
+    {
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(currentSceneIndex);
+    }
+
+    public void TakeDamage(int damage)
+    {
+        currentHearts -= damage;
+        currentHearts = Mathf.Clamp(currentHearts, 0, maxHearts);
     }
 }

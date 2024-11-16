@@ -9,10 +9,11 @@ public class GameManager : MonoBehaviour
     //este script controla todo, funcionalidad y variabbles
 
     public static GameManager instance; // accesible a todo (variable estática) SINGLETON
-    public enum GameManagerVariables { TIME, KILLS }; // tipo enum (enumerar) para facilitar la lectura de código, time seria 0, points 1
+    public enum GameManagerVariables { TIME, KILLS, POINTS }; // tipo enum (enumerar) para facilitar la lectura de código, time seria 0, points 1
 
     private float time;
     private int kills;
+    private int points;
 
     private void Awake()
     {
@@ -77,6 +78,32 @@ public class GameManager : MonoBehaviour
         /* AudioManager.instance.ClearAudios();*/ // oye, audioManager, limpia todos los sonidos que estan sonando
     }
 
+    public int GetPoints()
+    {
+
+        return points;
+
+    }
+
+    //setter
+    public void SetPoints(int value)
+    {
+        points = value;
+    }
+
+    public void PlayerLostHeart()
+    {
+        // Lógica que se ejecuta cuando el jugador pierde un corazón
+        Debug.Log("El jugador ha perdido un corazón.");
+        // Aquí puedes agregar más lógica, como actualizar la UI o verificar si el jugador ha muerto
+    }
+
+    public void PlayerDied()
+    {
+        // Lógica que se ejecuta cuando el jugador muere
+        Debug.Log("El jugador ha muerto.");
+        // Aquí puedes agregar lógica para reiniciar el juego, mostrar un menú de muerte, etc.
+    }
 
     public void ExitGame()
     {

@@ -33,6 +33,7 @@ public class DamageZone : MonoBehaviour
                 }
             }
         }
+
         //// verifica si el objeto que entro tiene el componente PlayerHealth
         //PlayerHealth playerHealth = other.GetComponent<PlayerHealth>();
         //if (playerHealth != null)
