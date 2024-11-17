@@ -128498,7 +128498,7 @@ AnimationClip:
   - time: 1.3833333
     functionName: CreateZone
     data: 
-    objectReferenceParameter: {fileID: 0}
+    objectReferenceParameter: {fileID: 919132149155446097, guid: c1d89b4baddfaa440a35317f9f69b99e, type: 3}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
