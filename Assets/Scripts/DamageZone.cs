@@ -12,10 +12,10 @@ public class DamageZone : MonoBehaviour
     public float radius = 8f;
 
 
-    public void CreateZone(GameObject owner)
+    public void CreateZone()
     {
-        RaycastHit[] hits = Physics.SphereCastAll(owner.transform.position, radius, Vector3.up);
-        GameObject target = owner.GetComponent<TargetReference>().targets[0]; //target, ubi del player
+        RaycastHit[] hits = Physics.SphereCastAll(transform.position, radius, Vector3.up);
+        GameObject target = GetComponent<TargetReference>().targets[0]; //target, ubi del player
 
         foreach (RaycastHit hit in hits)
         {
