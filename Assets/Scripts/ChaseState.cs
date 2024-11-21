@@ -12,7 +12,7 @@ public class ChaseState : State
     //Script PARA PERSEGUIR
     public override State Run(GameObject owner)
     {
-        State nextState = CheckActions(owner);
+        State nextState = CheckActions(owner);// comprueba  si se han realizado las acciones
 
         NavMeshAgent navMeshAgent = owner.GetComponent<NavMeshAgent>(); //owner tiene el componente de navmeshagent / nos podemos mover
         GameObject target = owner.GetComponent<TargetReference>().targets[0]; // oye owner dame tu componente de targetreference / tenemos el objetivo por el que nos vamos a mover

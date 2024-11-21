@@ -8,6 +8,7 @@ using UnityEngine.UIElements;
 
 public class WanderState : State
 {
+    
     private float timer; //temporizador
     public float wanderTimer = 2f; // tiempo entre cambios de dirección
     float wanderRadius; // Radio de deambulación
@@ -36,7 +37,9 @@ public class WanderState : State
         return nextState;
     }
     private void Wander(NavMeshAgent navMeshAgent)
-    {
+    { 
+        //aqui iria el do while con el bool---> script de diego
+
         //generamos una nueva posicion aleatoria dentro del radio de deambulacion
         Vector3 randomDirection = Random.insideUnitSphere * wanderRadius;
         randomDirection += navMeshAgent.transform.position;//nueva posicion en relacion con la posicion actual
