@@ -79,4 +79,7 @@ public abstract class State : ScriptableObject // es abstract porque el Run no v
             
         }
     }
+
+    
+   
 }
